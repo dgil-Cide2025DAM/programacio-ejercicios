@@ -183,7 +183,31 @@ public class Main {
         System.out.println(s1);
         String s2 = " "; 
         System.out.println(s2);
-       // String s3 = " programación ";
-        // System.out.println(s3); 
+        String s3 = " programación ";
+        System.out.println(s3); 
+        // String s4 = 'W';
+        // System.out.println(s4); // MAL, '' es para char, no para string
+        String s4 = "Rojo, Blanco y Azul";
+        System.out.println(s4);
+        String s5 = "1.3e-1-2";
+        System.out.println(s5);
+        String s6 = "A";
+        System.out.println(s6);
+         //String s7 = "programacion "Java"";
+        // System.out.println(s7); // MAL, no reconoce "Java" dentro de otro ""
+        String s7 = "\n";
+        System.out.println(s7);
+        String s8 = "Nombre:";
+        System.out.println(s8);
+        // String s9 = """;
+        // System.out.println(s9); // MAL, no reconoce """
+        // String s9 = "FP'; // MAL, no reconoce ' dentro de ""
+        // System.out.println(s9);
+        // String s9 = programacion;
+        // System.out.println(s9); // MAL, no reconoce programacion sin ""
+        String s9 = "4 + 5 * 2";
+        System.out.println(s9);
+
+        /**********************EJERCICIO DECLARAR VARIABLES************************** */
     }
 }
