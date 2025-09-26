@@ -110,7 +110,80 @@ public class Main {
       System.out.println(n21); 
    //   int n22 = abcd;
     //  System.out.println(n22); // error de compilacion, no reconoce abcd
+      int n22 = 0125;
+      System.out.println(n22); // devuelve 85
+      double n23 = .01011;
+      System.out.println(n23); 
+      double n24 = 3e12; // devuelve 3.0E12
+      System.out.println(n24);
+      // double n25 = 3_e12; MAL, Operador ilegal _
+      // System.out.println(n25); 
+      double n26 = -3E-1_2; // devuelve -3.0E-12
+      System.out.println(n26); 
+     // int n27 = 0.8E;
+      // System.out.println(n27); // error de compilacion, no reconoce 0.8E
+    //  double n27 = 0B1212;
+     // System.out.println(n27); // error de compilacion, no reconoce 0B1212
+      int n28 = 1_2_3;
+      System.out.println(n28); // devuelve 123
+      int n29 = 0xedad;
+      System.out.println(n29); // devuelve 60845
+      int n30 = 0XBE2;
+      System.out.println(n30); // devuelve 3042
+      double n31 = 101e2;
+      System.out.println(n31); // devuelve 10100.0
+      // int n32 = B1101;
+      // System.out.println(n32); // error de compilacion, no reconoce B1101
+     // double n32 = 1.34.5;
+      // System.out.println(n32); // error de compilacion, no reconoce .5
+      float n32 = 12.3E4F;
+      System.out.println(n32); // devuelve 123000.0
+      // double n33 = 0X12AG; G error, no compila
+      // System.out.println(n33); // error de compilacion, no reconoce G
     // ******************************************************************************************
-        
+        // ***********************EJERCICIO CHAR************************************
+        char c1 = 'a';
+        System.out.println(c1);
+        // char c2 = '\ñ'; // MAL, no reconoce la ñ
+        // System.out.println(c2);';
+        // char c2 = "XYZ"; Char solamente reconoce un caracter, no una cadena
+        // System.out.println(c2);
+        // char c2 = +;
+        // System.out.println(c2); // MAL, no reconoce +
+        char c2 = '$';
+        System.out.println(c2);
+        //char c3 = "T"; "" esto es para string, no char
+        // System.out.println(c3);
+        char c4 = '4';
+        System.out.println(c4);
+        char c5 = '+';
+        System.out.println(c5);
+        char c6 = '\n';
+        System.out.println(c6);
+        char c7 = 'ñ';
+        System.out.println(c7);
+        char c8 = '\t';
+        System.out.println(c8);
+        char c9 = '?';
+        System.out.println(c9);
+       // char c10 = '/n'; // MAL, no reconoce /n
+       //  System.out.println(c10);
+        char c10 = '\\';
+        System.out.println(c10);
+        char c11 = '\u0066';
+        System.out.println(c11);
+       // char c12 = k;
+       //  System.out.println(c12); // MAL, no reconoce k
+        char c13 = ':';
+        System.out.println(c13);
+        /*************************EJERCICIOS STRINGS********************************** */
+        // String s1 = '8:15 P.M.';  MAL, '' es para char, no para string
+        // System.out.println(s1);
+        String s1 = "Capitulo \'3\'";
+        System.out.println(s1);
+        String s2 = " "; 
+        System.out.println(s2);
+       // String s3 = " programación ";
+        // System.out.println(s3); 
     }
 }
