@@ -404,25 +404,26 @@ public class Main {
      // se han iniciliazado antes... (me di cuenta mientras hacia la diapositiva 11)
 
     /***********************
-     * Diapositiva 11: Calculos aritmeticos********************
-     */ /* 
-    char a = 8;
-    char b = 3;
+     * Diapositiva 11: Calculos aritmeticos******************** **********************/
+    
+     /* 
+    int a = 8;
+    int b = 3;
     int c = -5;
     int suma = a + b + c; // 6
-    int division = a / b; // 2
-    int division2 = a / c; // -1
-    int multiplicacion = a * b / c; // -4
-    int multiplicacion2 = (a * c) % b; // -1
-    int m1 = (3 * a - 2 * b) % (2 * a - c); // 18
-    int m2 = (a - 3 * b) % (c + 2 * a) / (a - c); // 0
-    int m3 = (2 * b + 3 * (a - c)); // 45
-    int m4 = (a % b); //2
-    int m5 = (a % c); // 3
-    int m6 = (a * (b / c)); // 0
-    int m7 = (a * c % b); // -1
-    int m8 = (2 * (a / 5 + (4 - b * 3)) % (a + c - 2)); // 0
-    int m9 = (a - b - c * 2); // 15
+    double division = a / b; // 2.6
+    double division2 = a / c; // -1.6
+    double multiplicacion = a * b / c; // -4
+    double multiplicacion2 = (a * c) % b; // -1
+    double m1 = (3 * a - 2 * b) % (2 * a - c); // 18
+    double m2 = (a - 3 * b) % (c + 2 * a) / (a - c); // 0
+    double m3 = (2 * b + 3 * (a - c)); // 45
+    double m4 = (a % b); //2
+    double m5 = (a % c); // 3
+    double m6 = (a * (b / c)); // 0
+    double m7 = (a * c % b); // -1
+    double m8 = (2 * (a / 5 + (4 - b * 3)) % (a + c - 2)); // 0
+    double m9 = (a - b - c * 2); // 15
     System.out.println(suma);
     System.out.println(division);
     System.out.println(division2);
@@ -436,7 +437,9 @@ public class Main {
     System.out.println(m6);
     System.out.println(m7);
     System.out.println(m8);
-    System.out.println(m9); */
+    System.out.println(m9); 
+    */
+
     /***************** Diapositiva 12********************************** */
     /* 
     double x, y, z;
@@ -489,47 +492,47 @@ public class Main {
     ln = 25;
     f = 30.0f;
     d = 35.0;
-    c = '3'; 
-    double resA = i + c; // 66.0
-    double resB = f - c; // -21.0
+    c = 'A'; 
+    double resA = i + c;  // MAL, no puedes sumar un caracter a un numero 
+    double resB = f - c; // MAL, no puedes restar un caracter a un numero
     double resC = d + f; // 50.0
     double resD = d + i; // 0.5
     double resE = i / f; // 30.0
     double resF = s + j; // 55.0
     double resG = d + j; // 510.0
-    double resH = s * c; // 86.0
-    double resI = d+c; // 56.0
-    double resJ = b+c; // 10.0
-    double resK = b / c+s; // 102.0
-    double resL = c + c; // 75.0
+    double resH = s * c; // MAL, no puedes multiplicar un caracter por un numero
+    double resI = d+c; // MAL, no puedes sumar un caracter a un numero
+    double resJ = b+c; // MAL, no puedes sumar un caracter a un numero
+    double resK = b / c+s; // MAl, caracter no puede estar en operaciones
+    double resL = c + c; // MAL, caracter no puede estar en operaciones
     double resM = i + ln +d; // 76.0
-    double resN = ln + c; // 58.0
+    double resN = ln + c; // Mal, caracter no puede estar en operaciones
     double resO = 5 / j; // 0.0
     double resP = 5.2 / j; // 0.26
     double resQ = i * f * 2.5;  // 1125.0
-//    double resR = ln *f*2.5F; Los caracteres no pueden estar en operaciones
-  //  double resS = j - 4L;
+//  double resR = ln *f*2.5F; Los caracteres no pueden estar en operaciones
+  // double resS = j - 4L;
    // double resT = j - 4L * 2.5F;
-    // double resU = b + 2.5 * i + 35F;
-   // double resV = 'a' + b;
-   // double resW = 'a' + c;
+  // double resU = b + 2.5 * i + 35F;
+   //double resV = 'a' + b; Los caracteres no pueden estar en operaciones
+   // double resW = 'a' + c; // Los caracteres no pueden estar en operaciones
     double resX = c + 2; // 53.0
     double resY = c - ln / 2; // 39.0
     double resZ = 2 / i + 2.0 / j; // 0.1
-    System.out.println(resA); 
-    System.out.println(resB);
+   // System.out.println(resA); 
+    // System.out.println(resB); 
     System.out.println(resC);
     System.out.println(resD);
     System.out.println(resE);
     System.out.println(resF);
     System.out.println(resG);
-    System.out.println(resH);
-    System.out.println(resI);
-    System.out.println(resJ);
-    System.out.println(resK);
-    System.out.println(resL);
+    //System.out.println(resH);
+    //System.out.println(resI);
+   // System.out.println(resJ);
+    // System.out.println(resK);
+    // System.out.println(resL);
     System.out.println(resM);
-    System.out.println(resN);
+   // System.out.println(resN);
     System.out.println(resO);
     System.out.println(resP);
     System.out.println(resQ);
