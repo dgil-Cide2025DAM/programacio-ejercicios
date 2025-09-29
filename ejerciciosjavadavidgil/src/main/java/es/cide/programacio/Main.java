@@ -287,6 +287,7 @@ public class Main {
     /**********************
      * DECLARAR VARIABLES (Diapositiva 8)**************************************
      */
+    /* 
     byte edad;
     edad = 25;
     System.out.println(edad);
@@ -344,6 +345,7 @@ public class Main {
     tallaCamiseta = 'L';
     tallaCamiseta = 'X';
     System.out.println(tallaCamiseta);
+    */
     /***********************
      * EXPRESIONES ALGEBRAICAS A ALGORITMICAS***********************************
      */
@@ -368,14 +370,14 @@ public class Main {
      * /*******************EXPRESIONES ALGEBRAICAS A ALGORITMICAS(diapositiva
      * 10)***********************************
      */
-     /* int x = 2, y = 3, z = 4, g = 5, h = 6, j = 7, p = 8, q = 9, e = 10, f = 11, m = 12, n = 13;
-    double res1 = (3 / 2 + 4 / 3);
+    /* int x = 2, y = 3, z = 4, g = 5, h = 6, j = 7, p = 8, q = 9, e = 10, f = 11, m = 12, n = 13, r = 14, s = 15;
+    double res1 = ((3 / 2) + (4 / 3));
     System.out.println(res1);
-    // double res2 = (1/x-5-3*x*y/4); x y z las tengo en la diapositiva 12
+    // double res2 = ((1/(x-5))-((3*x*y)/4)); x y z las tengo en la diapositiva 12
     // System.out.println(res2);
-    double res3 = (1 / 2 + 7);
+    double res3 = ((1 / 2) + 7);
     System.out.println(res3);
-    double res4 = (7 + 1 / 2);
+    double res4 = (7 + (1 / 2));
     System.out.println(res4);
     double res5 = (Math.pow(a, 2)/b-c+d-e/f-(g*h)/j); MAL, no acepta a todas las
     letras como variables; aademas puse Math.pow(a, 2 ) en vez de a^2 para elevar
@@ -389,8 +391,7 @@ public class Main {
     System.out.println(res5);
     double res5 = (Math.pow(a, 2)/(Math.pow(b, 2)+(Math.pow(c, 2)/(Math.pow(d,
     2)))));
-    System.out.println(res5); Sigue sin reconocer d como variable. No entiendo el
-    porque.
+    System.out.println(res5); 
     double res5 = (m+n/p/q-r/s); // No reconoce m,n, ni r y s ; pone que no
     pueden ser variables "m cannot be resolved to a variableJava(33554515)"
     System.out.println(res5);
@@ -473,6 +474,7 @@ public class Main {
     */
 
     /***************** Diapositiva 13********************************** */
+    /* 
     byte b;
     short s;
     long ln;
@@ -488,33 +490,33 @@ public class Main {
     f = 30.0f;
     d = 35.0;
     c = '3'; 
-    double resA = i + c; // int
-    double resB = f - c; // float - char = float
-    double resC = d + f; // double + float = double
-    double resD = d + i; // double + int = double
-    double resE = i / f;
-    double resF = s + j;
-    double resG = d + j;
-    double resH = s * c;
-    double resI = d+c;
-    double resJ = b+c;
-    double resK = b / c+s;
-    double resL = c + c;
-    double resM = i + ln +d;
-    double resN = ln + c;
-    double resO = 5 / j;
-    double resP = 5.2 / j;
-    double resQ = i * f * 2.5;
+    double resA = i + c; // 66.0
+    double resB = f - c; // -21.0
+    double resC = d + f; // 50.0
+    double resD = d + i; // 0.5
+    double resE = i / f; // 30.0
+    double resF = s + j; // 55.0
+    double resG = d + j; // 510.0
+    double resH = s * c; // 86.0
+    double resI = d+c; // 56.0
+    double resJ = b+c; // 10.0
+    double resK = b / c+s; // 102.0
+    double resL = c + c; // 75.0
+    double resM = i + ln +d; // 76.0
+    double resN = ln + c; // 58.0
+    double resO = 5 / j; // 0.0
+    double resP = 5.2 / j; // 0.26
+    double resQ = i * f * 2.5;  // 1125.0
 //    double resR = ln *f*2.5F; Los caracteres no pueden estar en operaciones
   //  double resS = j - 4L;
    // double resT = j - 4L * 2.5F;
     // double resU = b + 2.5 * i + 35F;
    // double resV = 'a' + b;
    // double resW = 'a' + c;
-    double resX = c + 2;
-    double resY = c - ln / 2;
-    double resZ = 2 / i + 2.0 / j;
-    System.out.println(resA); // int + char = int ( creo que es por el orden de la operacion)
+    double resX = c + 2; // 53.0
+    double resY = c - ln / 2; // 39.0
+    double resZ = 2 / i + 2.0 / j; // 0.1
+    System.out.println(resA); 
     System.out.println(resB);
     System.out.println(resC);
     System.out.println(resD);
@@ -535,16 +537,15 @@ public class Main {
    // System.out.println(resS);
    // System.out.println(resT);
    // System.out.println(resU);
-  //  System.out.println(resV); /*  char + byte = int ( creo que es por el
-   // orden de la operacion) */
+  //  System.out.println(resV);
    // System.out.println(resW);
     System.out.println(resX);
     System.out.println(resY);
     System.out.println(resZ);
-
+    */
 
     //******************Diapositiva 14************************ */
-/* 
+    /* 
     boolean X, Y, Z;
     X = true;
     Y = false;
@@ -560,10 +561,11 @@ public class Main {
     System.out.println(rC);
     System.out.println(rD);
     System.out.println(rE);
-    System.out.println(rF); */
+    System.out.println(rF);
+    */
 
     /*******************Diapositiva 15*****************************************/
-    
+    /* 
     boolean W, X, Y, Z;
     W = false;
     X = true;
@@ -580,9 +582,10 @@ public class Main {
     System.out.println(rC); // true
     System.out.println(rD); // true
     System.out.println(rE); // true
-    System.out.println(rF); // false
+    System.out.println(rF); // false */
 
     /*******************Diapositiva 16*****************************************/
+    /* 
     int i = 8, j = 5;
     float x = 0.005F, y = -0.01F;
     char c = 'c', d = 'd';
@@ -638,5 +641,6 @@ public class Main {
     System.out.println(r23); // true
     System.out.println(r24); // false
     System.out.println(r25); // false
+    */
   }
 }
