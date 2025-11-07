@@ -6,6 +6,7 @@ package es.cide.programacio;
 
 public class Main {
   public static void main(String[] args) {
+    
     // ***************************EJERCICIO
     // IDENTIFICADORS*********************************** */
 
@@ -38,12 +39,11 @@ public class Main {
     // int %descuento; % esto no puede estar aqui, es como el #
     char Weight;
     // double $$precioMinimo; CAracter especial $
-    // int _$Único; mejor sin accentos, y sin la _
-    // int tamaño_maximo; mejor sin ñ
+    int _$Único;
+    int tamaño_maximo;
     // int peso.maximo; MAL, . entre dos palabras
     int Precio___;
     // int matricula?; MAL, ? interrogante al final de la variable, no se lee y se
-    // compila mal
     int cuántoVale; // mejor sin accentos
     int high;
     int barça; // mejor sin ç
@@ -96,25 +96,25 @@ public class Main {
     // System.out.println(n12);
     float n12 = .3e3f; // salta 300.0
     System.out.println(n12);
-    short n13 = 0b111; // probé con el byte y el short, y sale 7 de valor
-    System.out.println(n13);
-    long n14 = 12_234L; // elimina caracteres que no entiende
+    // short n13 = 0b111; // caracter ilegal b
+    // System.out.println(n13);
+    long n14 = 12_234L; // elimina caracteres que no entiende _
     System.out.println(n14);
-    int n15 = 0x1010B; // imprime resultados distintos
-    System.out.println(n15);
-    int n16 = 0Xabcd; // igual que el de arriba
-    System.err.println(n16);
+    // int n15 = 0x1010B; No puedes meter una B en un int, ya que es un ENTERO
+    // System.out.println(n15);
+    // int n16 = 0Xabcd; // igual que el de arriba
+    // System.err.println(n16);
     long n17 = 0xabcEL;
     System.out.println(n17); // ha imprimido 43982, y el anterior 43981
     // int n18 = _234;
     // System.out.println(n18); // no ha imprimido nada, error de compilacion
-    int n18 = 0x1010B; // imprime 65803
-    System.out.println(n18);
+    //int n18 = 0x1010B; // Caracter ilegal B
+    // System.out.println(n18);
     double n19 = 1_234.2E-2; // imprime 12.342
     System.out.println(n19);
-    // int n20 = 1234.2EF; error de compilacion, no reconoce el F
+    // int n20 = 1234.2EF; caracter no se puede en int
     // System.out.println(n20);
-    // int n20 = 1234.2E3F; error de compilacion, no reconoce el F
+    // int n20 = 1234.2E3F; caracter no se puede en int
     // System.out.println(n20);
     // double n20 = 1_1.2e_2; // error de compilacion, no reconoce el 2e_2
     // System.out.println(n20);
@@ -134,7 +134,7 @@ public class Main {
     System.out.println(n24);
     // double n25 = 3_e12; MAL, Operador ilegal _
     // System.out.println(n25);
-    double n26 = -3E-1_2; // devuelve -3.0E-12
+    double n26 = -3E-1_2; // devuelve -3.0E-12 elimina _
     System.out.println(n26);
     // int n27 = 0.8E;
     // System.out.println(n27); // error de compilacion, no reconoce 0.8E
@@ -142,10 +142,11 @@ public class Main {
     // System.out.println(n27); // error de compilacion, no reconoce 0B1212
     int n28 = 1_2_3;
     System.out.println(n28); // devuelve 123
-    int n29 = 0xedad;
-    System.out.println(n29); // devuelve 60845
-    int n30 = 0XBE2;
-    System.out.println(n30); // devuelve 3042
+
+    // int n29 = 0xedad; caracter ilegal d
+    // System.out.println(n29); // devuelve 60845
+    // int n30 = 0XBE2; caracter ilegal E
+    // System.out.println(n30); // devuelve 3042
     double n31 = 101e2;
     System.out.println(n31); // devuelve 10100.0
     // int n32 = B1101;
@@ -234,13 +235,13 @@ public class Main {
     q = 15;
     System.out.println(p);
     System.out.println(q);
-    // char a, b, c;
-    // a = 'X';
-    // b = 'Y'; En la diapositiva 11 necesito estas variables
-    // c = 'Z';
-    // System.out.println(a);
-    // System.out.println(b);
-    // System.out.println(c);
+    char a, b, c;
+    a = 'X';
+    b = 'Y'; 
+    c = 'Z';
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
     long contador = 102930;
     System.out.println(contador);
     int indice = 123;
@@ -255,15 +256,13 @@ public class Main {
     ultimo = false;
     System.out.println(primero);
     System.out.println(ultimo);
-    /*
-     * float x, y, z;
-     * x = 1.5f;
-     * y = 2.5f;
-     * z = 3.5f;
-     * System.out.println(x);
-     * System.out.println(y);
-     * System.out.println(z);
-     */ // las variables x,y,z ya las uso en la diapositiva 12
+    float x, y, z;
+    x = 1.5f;
+    y = 2.5f;
+    z = 3.5f;
+    System.out.println(x);
+    System.out.println(y);
+    System.out.println(z);
     double raiz1, raiz2;
     raiz1 = 1.732;
     raiz2 = 3.1416;
@@ -286,8 +285,7 @@ public class Main {
 
     /**********************
      * DECLARAR VARIABLES (Diapositiva 8)**************************************
-     */
-    /* 
+     */ 
     byte edad;
     edad = 25;
     System.out.println(edad);
@@ -321,16 +319,14 @@ public class Main {
     System.out.println(mayorDeEdad);
     double códigoPostal = 07011; // mejor sin acento
     System.out.println(códigoPostal);
-    boolean genero;
-    genero = false; // true hombre, false mujer
-    genero = true;
+    char genero = 'H';
     System.out.println(genero);
     byte numeroDeHijos = 0;
     System.out.println(numeroDeHijos);
     int tallaCamisa = 40;
     System.out.println(tallaCamisa);
-    // double precio1 = 20$;
-    // System.out.println(precio1); // MAL, no reconoce el $ en la variable
+    double precio1 = 20;
+    System.out.println(precio1); 
     String mensaje = "Hola a todos";
     System.out.println(mensaje);
     short mayorEdad = 18;
@@ -340,73 +336,81 @@ public class Main {
     byte contador1 = 0; // añado un 1 para no duplicar la variable
     System.out.println(contador1);
     char tallaCamiseta;
-    tallaCamiseta = 'S';
     tallaCamiseta = 'M';
-    tallaCamiseta = 'L';
-    tallaCamiseta = 'X';
     System.out.println(tallaCamiseta);
-    */
-    /***********************
-     * EXPRESIONES ALGEBRAICAS A ALGORITMICAS***********************************
+    
+    
+     /* EXPRESIONES ALGEBRAICAS A ALGORITMICAS***********************************
      */
-    // int resultado = (b/2-4*a*c); no pueden resolver la variable
-    // System.out.println(resultado);
-    /*
-     * double resultado1 = (3*x*y-5*x+12*x-17);
-     * System.out.println(resultado1);
-     * // int resultado2 = ((b+d)/(c+4)); // al parecer la d no puede ser una
-     * variable "d cannot be resolved to a variableJava(33554515)"
-     * // System.out.println(resultado2);
-     * double resultado2 = (x*y/y + 2);
-     * System.out.println(resultado2);
-     * double resultado3 = (1/y+3*x/z+1);
-     * System.out.println(resultado3);
-     * // double resultado4 = (1/(y+3) + x/y+); // le falta un valor(+) al final
-     * para que se complete la operacion
-     * // System.out.println(resultado4);
-     * double resultado4 = (1/y+3+x/y+1); // x y z las tengo en la diapositiva 12
-     * // System.out.println(resultado4);
-     * 
-     * /*******************EXPRESIONES ALGEBRAICAS A ALGORITMICAS(diapositiva
-     * 10)***********************************
-     */
-    /* int x = 2, y = 3, z = 4, g = 5, h = 6, j = 7, p = 8, q = 9, e = 10, f = 11, m = 12, n = 13, r = 14, s = 15;
+    int a = 2,
+    b = 5,
+    c = 3,
+    d = 7,
+    x = 3,
+    y = 4,
+    z = 1;
+    int resultado = (b/2-4*a*c);
+    System.out.println(resultado);
+    double resultado1 = (3*x*y-5*x+12*x-17);
+    System.out.println(resultado1);
+    int resultado2 = ((b+d)/(c+4)); 
+    System.out.println(resultado2);
+    double resultado3 = (x*y/y + 2);
+    System.out.println(resultado3);
+    double resultado4 = (1/y+3*x/z+1);
+    System.out.println(resultado4);
+   /* double resultado4 = (1/(y+3) + x/y+);  MAL; le falta un valor(+) al final
+    para que se complete la operacion 
+    System.out.println(resultado4); */
+    double resultado5 = (1/y+3+x/y+1);
+    System.out.println(resultado5);
+      
+    /* ******************EXPRESIONES ALGEBRAICAS A ALGORITMICAS(diapositiva 10)*********************************** */
+    int x = 2,
+    a= 4,
+    b = 5,
+    c = 6,
+    d = 7,
+    y = 3,
+    g = 5,
+    h = 6,
+    j = 7,
+    p = 8,
+    q = 9,
+    e = 10,
+    f = 11,
+    m = 12,
+    n = 13,
+    r = 14,
+    s = 15;
     double res1 = ((3 / 2) + (4 / 3));
     System.out.println(res1);
-    // double res2 = ((1/(x-5))-((3*x*y)/4)); x y z las tengo en la diapositiva 12
-    // System.out.println(res2);
+    double res2 = ((1/(x-5))-((3*x*y)/4));
+    System.out.println(res2);
     double res3 = ((1 / 2) + 7);
     System.out.println(res3);
     double res4 = (7 + (1 / 2));
     System.out.println(res4);
-    double res5 = (Math.pow(a, 2)/b-c+d-e/f-(g*h)/j); MAL, no acepta a todas las
-    letras como variables; aademas puse Math.pow(a, 2 ) en vez de a^2 para elevar
-    a 2
+    double res5 = ((Math.pow(a, 2)/(b-c))+((d-e)/((f/1)-((g*h)/j))));
     System.out.println(res5);
-    float res5 = (m/n+p); No reconoce m,n ; ademas puse float en vez de double
-    para probar si funcionaba
-    System.out.println(res5);
-    double res5 = (m+n/p-q); // No reconoce m,n ; pone que no pueden ser
-    variables "m cannot be resolved to a variableJava(33554515)"
-    System.out.println(res5);
-    double res5 = (Math.pow(a, 2)/(Math.pow(b, 2)+(Math.pow(c, 2)/(Math.pow(d,
+    float res35 = (m/n+p);
+    System.out.println(res35);
+    double res45 = (m+n/p-q); 
+    System.out.println(res45);
+    double res55 = (Math.pow(a, 2)/(Math.pow(b, 2)+(Math.pow(c, 2)/(Math.pow(d,
     2)))));
-    System.out.println(res5); 
-    double res5 = (m+n/p/q-r/s); // No reconoce m,n, ni r y s ; pone que no
-    pueden ser variables "m cannot be resolved to a variableJava(33554515)"
-    System.out.println(res5);
-    double res5 = ((3*a+b)/(c-(d+5*e)/f+(g/2*h))); // No reconoce ninguna
-    variable a partir de la d. Esta fue una operacion dificil de poner al tener
-    tantos niveles de estructura.
-    System.out.println(res5);
-    double res5 = (Math.pow(a, 2)+2*a*b+Math.pow(b, 2)/(1/Math.pow(x, 2))+2);
-    System.out.println(res5);  */ //no pueden resolver las variables, debido a que no
-     // se han iniciliazado antes... (me di cuenta mientras hacia la diapositiva 11)
+    System.out.println(res55); 
+    double res6 = (m+n/p/q-r/s); 
+    System.out.println(res6);
+    double res7 = ((3*a+b)/(c-(d+5*e)/f+(g/2*h))); 
+    System.out.println(res7);
+    double res8 = (Math.pow(a, 2)+2*a*b+Math.pow(b, 2)/(1/Math.pow(x, 2))+2);
+    System.out.println(res8);  
 
     /***********************
      * Diapositiva 11: Calculos aritmeticos******************** **********************/
     
-     /* 
+      
     int a = 8;
     int b = 3;
     int c = -5;
@@ -438,10 +442,10 @@ public class Main {
     System.out.println(m7);
     System.out.println(m8);
     System.out.println(m9); 
-    */
+    
 
     /***************** Diapositiva 12********************************** */
-    /* 
+     
     double x, y, z;
     x = 88;
     y = 3.5;
@@ -474,10 +478,10 @@ public class Main {
     System.out.println(r12);
     System.out.println(r13);
     System.out.println(r14); 
-    */
+    
 
     /***************** Diapositiva 13********************************** */
-    /* 
+    
     byte b;
     short s;
     long ln;
@@ -510,7 +514,7 @@ public class Main {
     double resO = 5 / j; // 0.0
     double resP = 5.2 / j; // 0.26
     double resQ = i * f * 2.5;  // 1125.0
-//  double resR = ln *f*2.5F; Los caracteres no pueden estar en operaciones
+  // double resR = ln *f*2.5F; Los caracteres no pueden estar en operaciones
   // double resS = j - 4L;
    // double resT = j - 4L * 2.5F;
   // double resU = b + 2.5 * i + 35F;
@@ -545,10 +549,10 @@ public class Main {
     System.out.println(resX);
     System.out.println(resY);
     System.out.println(resZ);
-    */
+
 
     //******************Diapositiva 14************************ */
-    /* 
+    
     boolean X, Y, Z;
     X = true;
     Y = false;
@@ -565,10 +569,10 @@ public class Main {
     System.out.println(rD);
     System.out.println(rE);
     System.out.println(rF);
-    */
+    
 
     /*******************Diapositiva 15*****************************************/
-    /* 
+     
     boolean W, X, Y, Z;
     W = false;
     X = true;
@@ -588,7 +592,7 @@ public class Main {
     System.out.println(rF); // false */
 
     /*******************Diapositiva 16*****************************************/
-    /* 
+     
     int i = 8, j = 5;
     float x = 0.005F, y = -0.01F;
     char c = 'c', d = 'd';
@@ -644,6 +648,6 @@ public class Main {
     System.out.println(r23); // true
     System.out.println(r24); // false
     System.out.println(r25); // false
-    */
+    
   }
 }
