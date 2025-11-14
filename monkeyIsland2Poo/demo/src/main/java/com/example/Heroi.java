@@ -71,7 +71,7 @@ public class Heroi {
         }
         // Recoger la respuesta
         System.out.println("Introdueix la teva resposta:");
-        int numeroElegido = sc.nextInt();
+        int numeroElegido = sc.nextInt(); // Almacena temporalmente la opción que el usuario ha escogido
         return respostes[numeroElegido - 1];
         /*
          * Restar 1 para ajustar al índice del array, imagina que la respuesta del
