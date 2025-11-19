@@ -30,10 +30,10 @@ public class Pirata {
 
     // Constructor
 
-    public Pirata(String nom, int vidaDeFuera, String[] insultosDeFuera, String[] respostesDeFuera) {
-        this.nom = nom;
+    public Pirata(String[] nomPiratas, int vidaDeFuera, String[] insultosDeFuera, String[] respostesDeFuera) {
         viu = true;
         rd = new Random();
+        this.nom = nomPiratas[rd.nextInt(nomPiratas.length)];
         this.vida = rd.nextInt(1, 4); // Vida Aleatoria 1 y 3
 
         this.insultos = insultosDeFuera;
@@ -45,6 +45,8 @@ public class Pirata {
         insultosPropis[0] = insultosDeFuera[indiceAleatorio];
         respostesPropies[0] = respostesDeFuera[indiceAleatorio];
 
+
+        // Dado 2
         indiceAleatorio1 = rd.nextInt(insultosDeFuera.length);
         while (indiceAleatorio1 == indiceAleatorio) {
             indiceAleatorio1 = rd.nextInt(insultosDeFuera.length);
@@ -52,6 +54,7 @@ public class Pirata {
         insultosPropis[1] = insultosDeFuera[indiceAleatorio1];
         respostesPropies[1] = respostesDeFuera[indiceAleatorio1];
 
+        // Dado 3
         indiceAleatorio2 = rd.nextInt(insultosDeFuera.length);
         while (indiceAleatorio2 == indiceAleatorio || indiceAleatorio2 == indiceAleatorio1) {
             indiceAleatorio2 = rd.nextInt(insultosDeFuera.length);
@@ -64,6 +67,12 @@ public class Pirata {
     // Getter / Setter
     public String getNom() {
         return this.nom;
+    }
+    public int getVida() {
+        return vida;
+    }
+    public boolean getViu() {
+        return viu;
     }
     // Métodos
 

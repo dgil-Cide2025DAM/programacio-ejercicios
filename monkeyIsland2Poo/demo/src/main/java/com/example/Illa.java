@@ -16,7 +16,7 @@ public class Illa {
     Pirata pirata;
 
     // Constructor
-    public Illa(String nom, String[] insultosDeFuera, String[] respostesDeFuera) {
+    public Illa(String nom, String[] nomPiratas, String[] insultosDeFuera, String[] respostesDeFuera) {
         this.nom = nom;
         rd = new Random();
         this.insultos = insultosDeFuera;
@@ -26,7 +26,11 @@ public class Illa {
         piratas = new Pirata[numeroPiratas]; // contenedor vacío con el tamaño correcto.
 
         for (int numeroPiratasHechos = 0; numeroPiratasHechos < numeroPiratas; numeroPiratasHechos++) {
-            piratas[numeroPiratasHechos] = new Pirata("Pirata", 0, this.insultos, this.respostes);
+            piratas[numeroPiratasHechos] = new Pirata(nomPiratas, 0, this.insultos, this.respostes);
+
+            // Crea piratas nuevos a medida que la variable de piratasHechos aumenta,
+            // mediante la clase pirata (variable privada) [con el indice (variable de este
+            // for)] y le pasamos los parametros de la clase Pirata
         }
     }
 
@@ -53,7 +57,3 @@ public class Illa {
  */
 
 // El mètode constructor de l’illa generarà i guardarà els pirates dins l’illa.
-
-// La classe haurà de tenir un mètode vullUnPirata(index) que farà que el nostre
-// heroi s’enfronti, un per un, a tots els pirates de l’illa. El métode
-// vullUnPirata ha de retornar un objecte de tipus pirata.
