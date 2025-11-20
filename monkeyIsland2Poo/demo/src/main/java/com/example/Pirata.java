@@ -9,8 +9,8 @@ public class Pirata {
 
     /*
      * Array cuadruple: dos grandes categorías: insultos y respuestas
-     * dos arrays pequeños que contienen 3 insultos propios exclusivos de un pirata
-     * otro array pequeño que contiene las respuestas a esos insultos
+     * un array pequeños que contienen 3 insultos propios exclusivos de un pirata
+     * otro array pequeño que contiene las respuestas a esos insultos propios -> respuestas propias
      */
 
     // Atributos
@@ -21,9 +21,9 @@ public class Pirata {
     private int indiceAleatorio;
     private int indiceAleatorio1;
     private int indiceAleatorio2;
-    private String[] insultos;
+    private String[] insultos; // Puede ser constante, ya que nunca cambia en ningun momento del programa, pero como tengo que cambiar su nombre en todos los archivos donde se haya usado, no lo hare (ocurre lo mismo con sus respuestas)
     private String[] respostes;
-    private String[] insultosPropis = new String[3];
+    private String[] insultosPropis = new String[3]; // Ins Propios del pirata (mismo indice que sus respuestas propias)
     private String[] respostesPropies = new String[3];
     private int indiceElegido;
     private String insultoElegido;
@@ -33,11 +33,11 @@ public class Pirata {
     public Pirata(String[] nomPiratas, int vidaDeFuera, String[] insultosDeFuera, String[] respostesDeFuera) {
         viu = true;
         rd = new Random();
-        this.nom = nomPiratas[rd.nextInt(nomPiratas.length)];
+        this.nom = nomPiratas[rd.nextInt(nomPiratas.length)]; // este nombre viene de fuera tambien como los insultos y respuestas
         this.vida = rd.nextInt(1, 4); // Vida Aleatoria 1 y 3
 
-        this.insultos = insultosDeFuera;
-        this.respostes = respostesDeFuera;
+        this.insultos = insultosDeFuera; //Array de insultos (main) -> variable de array pasada en el parametro del constructor (insultosDeFuera)
+        this.respostes = respostesDeFuera; // igual que lo insultos
 
         // Tirar el dado, y coger respuesta/insulto aleatorio
 
@@ -84,7 +84,7 @@ public class Pirata {
     }
 
     public boolean replica(String respostaHeroi) {
-        return respostesPropies[indiceElegido].equals(respostaHeroi);
+        return respostesPropies[indiceElegido].equals(respostaHeroi); // si la respuesta propia del indice elegido, del pirata es igual a la respuesta que eligio el heroe/usuario
     }
 
     public boolean vida() {

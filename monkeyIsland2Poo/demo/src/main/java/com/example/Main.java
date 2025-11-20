@@ -47,7 +47,6 @@ public class Main {
         int index;
         boolean pirataViu;
         boolean heroeViu;
-        boolean MuerteJugador;
         System.out.println("\nDeep in the Caribbean\n");
         System.out.println();
         System.out.println("----------------------- ╬ MONKEY ISLAND ╬ --------------------");
@@ -68,14 +67,13 @@ public class Main {
 
         System.out.println("¡Prepárate para enfrentarte al primer pirata!\n");
 
-        Pirata pirata = new Pirata(nomPiratas, 1, insultos, respostes);
+        Pirata pirata;
 
         heroeViu = heroi.getViu();
         index = 0;
-        MuerteJugador = false;
-        while (index < isla.getNumeroPiratas() && heroeViu) {
-            pirata = isla.vullUnPirata(index);
-            pirataViu = pirata.getViu();
+        while (index < isla.getNumeroPiratas() && heroeViu) { // Condicion principal: mientras queden piratas y el heroe este vivo
+            pirata = isla.vullUnPirata(index); // Cogemos el pirata de la isla segun el index
+            pirataViu = pirata.getViu(); // Actualizamos la variable de si esta vivo el pirata (ya que fuera lo cogemos tambien)
 
             while (pirataViu && heroeViu) { // Le damos una pequeña intro del pirata, al jugador
                 System.out.println("Te estás enfrentando al pirata: " + pirata.getNom());
